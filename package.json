@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.0.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "graphql": "^15.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
@@ -36,8 +38,10 @@
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
+    "@storybook/addon-storyshots": "^5.3.19",
     "@storybook/addons": "^5.3.19",
     "@storybook/preset-create-react-app": "^3.1.4",
-    "@storybook/react": "^5.3.19"
+    "@storybook/react": "^5.3.19",
+    "react-test-renderer": "^16.13.1"
   }
 }

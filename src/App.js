@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { ApolloProvider } from "@apollo/client";
+import client from "./providers/ApolloClientProvider.js";
+import InboxScreen from "./components/InboxScreen";
+import { defaultTasksData } from "./components/TaskList.stories";
+import { actionsData } from "./components/Task.stories";
+import "./index.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApolloProvider client={client}>
+      <InboxScreen tasks={[...defaultTasksData]} actionsData={actionsData} />
+    </ApolloProvider>
   );
 }
-
 export default App;
+
+// import React from "react";
+// import { render } from "@testing-library/react";
+// import App from "./App";
+
+// test("renders learn react link", () => {
+//   const { getByText } = render(<App />);
+//   const linkElement = getByText(/learn react/i);
+//   expect(linkElement).toBeInTheDocument();
+// });
